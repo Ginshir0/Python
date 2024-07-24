@@ -31,9 +31,14 @@ while not game_over:
     if p1.body[0].distance(food) < 15:
         score.update()
         food.refresh()
+        p1.extend()
 
     # Detect collision with wall
     if p1.body[0].xcor() > 280 or p1.body[0].xcor() < - 280 or p1.body[0].ycor() > 280 or p1.body[0].ycor() < - 280:
         score.game_over()
         game_over = True
+
+    # Detect collision with tail
+    if p1.body[0].position()
+
 screen.exitonclick()

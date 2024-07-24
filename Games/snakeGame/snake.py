@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-LOCATIONS = [(0, 0), (-20, 0), (-40, 0)]
+LOCATIONS = [(-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
 
 
@@ -25,8 +25,9 @@ class Snake:
         new_snake.goto(position)
         self.body.append(new_snake)
 
+
     def extend(self):
-        pass
+        self.add_body(self.body[-1].position())
 
     def up(self):
         if self.body[0].heading() != 270:
